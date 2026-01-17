@@ -24,7 +24,7 @@ gcc main.c board.c ai.c -o morpion
 L'IA utilise l'algorithme Minimax :
 - Elle explore toutes les positions possibles du plateau.  
 - Elle choisit le coup qui maximise ses chances de gagner tout en minimisant celles de l'adversaire.  
-- Résultat : l'IA ne perd NORMALEMENT jamais
+
 
 ## Références : 
 

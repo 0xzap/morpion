@@ -9,15 +9,26 @@ void initBoard(){
             board[i][j]=' ';
 }
 
+void printCell(char c){
+    if(c == PLAYER) printf("\033[31mX\033[0m");
+    else if(c == AI) printf("\033[34mO\033[0m");
+    else printf(" ");
+}
+
 void printBoard(){
+    printf("    0   1   2\n");
     for(int i=0;i<3;i++){
+        printf(" %d ", i);
         for(int j=0;j<3;j++){
-            printf(" %c ", board[i][j]);
+            printf(" ");
+            printCell(board[i][j]);
+            printf(" ");
             if(j<2) printf("|");
         }
         printf("\n");
-        if(i<2) printf("---|---|---\n");
+        if(i<2) printf("   ---|---|---\n");
     }
+    printf("\n");
 }
 
 int isMovesLeft(){
